@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laeeq Zafar — Electrical Reliability Engineer</title>
+<meta name="description" content="Laeeq Zafar is an Electrical Reliability Engineer with a decade of industrial experience spanning offshore drilling, steel manufacturing, and reliability engineering. PMP, MEng (Waterloo).">
+<meta property="og:title" content="Laeeq Zafar — Electrical Reliability Engineer">
+<meta property="og:description" content="Electrical engineering, industrial automation, and reliability across offshore drilling and steel manufacturing.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2314181c'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%234fb3a9' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%234fb3a9'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14181c;
+    --bg-raised:#181d21;
+    --panel:#1c2126;
+    --line:#262c31;
+    --line-soft:#20262b;
+    --slate:#9aa7ad;
+    --slate-dim:#5f7078;
+    --ink:#f2f5f6;
+    --ink-dim:#c3ccd0;
+    --teal:#4fb3a9;
+    --teal-dim:#3a8a82;
+    --radius:3px;
+    --maxw:1080px;
+    --font-head:'Space Grotesk', sans-serif;
+    --font-body:'Inter', system-ui, sans-serif;
+    --font-mono:'IBM Plex Mono', 'SF Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  section{padding:96px 0;}
+  h1,h2,h3{font-family:var(--font-head); font-weight:600; margin:0; letter-spacing:-0.01em;}
+  h2{font-size:1.9rem; margin-bottom:8px;}
+  .section-kicker{font-family:var(--font-mono); font-size:0.76rem; color:var(--teal); margin-bottom:14px;}
+  .section-kicker::before{content:"// "; opacity:0.7;}
+  .section-intro{color:var(--slate); max-width:640px; margin-bottom:48px; font-size:1.02rem;}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+
+  /* Placeholder logo/photo slots — swap these for real assets */
+  .logo-slot{
+    display:flex; align-items:center; justify-content:center;
+    background:var(--panel); border:1px dashed var(--line-soft);
+    color:var(--slate-dim); font-family:var(--font-mono); font-size:0.62rem;
+    text-align:center; line-height:1.3; flex-shrink:0; border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .logo-slot img{width:100%; height:100%; object-fit:contain; display:none;}
+
+  /* NAV */
+  header{position:sticky; top:0; z-index:50; background:rgba(20,24,28,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:var(--maxw); margin:0 auto;}
+  .brand{font-family:var(--font-head); font-weight:600; font-size:1rem; color:var(--ink); text-decoration:none;}
+  .brand span{color:var(--teal);}
+  .nav-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav-links a{text-decoration:none; color:var(--slate); font-size:0.92rem; padding:6px 2px; border-bottom:2px solid transparent; transition:color .15s, border-color .15s;}
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--ink); border-color:var(--teal);}
+  .nav-toggle{display:none; background:none; border:1px solid var(--line); color:var(--ink); border-radius:var(--radius); padding:8px 10px; cursor:pointer;}
+  @media (max-width:760px){
+    .nav-links{position:fixed; inset:64px 0 auto 0; background:var(--bg-raised); flex-direction:column; gap:0; border-bottom:1px solid var(--line); transform:translateY(-8px); opacity:0; pointer-events:none; transition:transform .18s ease, opacity .18s ease;}
+    .nav-links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+    .nav-links a{padding:16px 24px; border-bottom:1px solid var(--line); width:100%;}
+    .nav-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{padding:88px 0 76px; border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid; grid-template-columns:1fr 240px; gap:48px; align-items:center;}
+  @media (max-width:760px){.hero-grid{grid-template-columns:1fr; text-align:left;}}
+  .status-tag{font-family:var(--font-mono); font-size:0.76rem; color:var(--slate-dim); margin-bottom:22px;}
+  .status-tag b{color:var(--teal); font-weight:500;}
+  .hero h1{font-size:clamp(2.3rem, 5vw, 3.4rem); margin-bottom:10px;}
+  .hero .role{font-size:clamp(1.05rem, 2vw, 1.25rem); color:var(--teal); font-family:var(--font-head); font-weight:500; margin-bottom:20px;}
+  .hero .tags{font-family:var(--font-mono); font-size:0.82rem; color:var(--slate); margin-bottom:26px;}
+  .hero p.lede{max-width:560px; color:var(--ink-dim); font-size:1.04rem; margin-bottom:32px;}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px;}
+  .btn{font-family:var(--font-body); font-size:0.93rem; font-weight:500; padding:12px 22px; border-radius:var(--radius); text-decoration:none; border:1px solid transparent; cursor:pointer; transition:transform .12s ease, background .15s ease, border-color .15s ease; display:inline-flex; align-items:center; gap:8px;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--teal); color:#0d1416;}
+  .btn-primary:hover{background:#5fc3b9;}
+  .btn-outline{border-color:var(--line); color:var(--ink);}
+  .btn-outline:hover{border-color:var(--slate);}
+  .portrait-slot{aspect-ratio:4/5; width:100%; border-radius:var(--radius);}
+  .portrait-slot .logo-slot{width:100%; height:100%; aspect-ratio:4/5; padding:12px;}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1fr 260px; gap:56px;}
+  @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
+  .about-copy p{color:var(--ink-dim); margin:0 0 16px;}
+  .about-copy p:first-child{color:var(--ink); font-size:1.08rem;}
+  .stat-panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px; align-self:start;}
+  .stat-panel .stat{padding:14px 0; border-bottom:1px solid var(--line);}
+  .stat-panel .stat:last-child{border-bottom:none;}
+  .stat b{display:block; font-family:var(--font-head); font-size:1.5rem; color:var(--teal);}
+  .stat span{font-size:0.85rem; color:var(--slate);}
+
+  /* CAREER TIMELINE */
+  .timeline{position:relative; padding-left:28px; border-left:2px solid var(--line);}
+  .tl-item{position:relative; padding-bottom:52px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{position:absolute; left:-34px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 4px var(--bg), 0 0 0 5px var(--line);}
+  .tl-head{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
+  .tl-head .logo-slot{width:44px; height:44px; font-size:0.55rem;}
+  .tl-item .dates{font-family:var(--font-mono); font-size:0.8rem; color:var(--teal); margin-bottom:4px;}
+  .tl-item h3{font-size:1.2rem;}
+  .tl-item .org{color:var(--slate); font-size:0.95rem; margin-bottom:14px;}
+  .tl-item p.desc{color:var(--ink-dim); margin:0 0 14px; max-width:600px;}
+  .tl-item ul{margin:0 0 14px; padding-left:18px; color:var(--ink-dim);}
+  .tl-item li{margin-bottom:6px;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{font-family:var(--font-mono); font-size:0.74rem; color:var(--slate); border:1px solid var(--line); border-radius:var(--radius); padding:4px 9px;}
+  .note-flag{font-family:var(--font-mono); font-size:0.74rem; color:var(--teal-dim); border:1px dashed var(--teal-dim); border-radius:var(--radius); padding:4px 9px; margin-top:8px; display:inline-block;}
+
+  /* SKILLS */
+  .skill-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .skill-module{background:var(--panel); padding:22px;}
+  .skill-module h3{font-family:var(--font-mono); font-size:0.85rem; color:var(--teal); margin-bottom:14px; font-weight:500;}
+  .skill-module ul{list-style:none; margin:0; padding:0;}
+  .skill-module li{color:var(--ink-dim); font-size:0.9rem; padding:5px 0 5px 16px; position:relative;}
+  .skill-module li::before{content:"—"; position:absolute; left:0; color:var(--slate-dim);}
+
+  /* EDUCATION */
+  .edu-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  @media (max-width:700px){.edu-grid{grid-template-columns:1fr;}}
+  .edu-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:24px; display:flex; gap:16px;}
+  .edu-card .logo-slot{width:48px; height:48px; font-size:0.55rem; flex-shrink:0;}
+  .edu-card .deg{font-size:1.05rem; margin-bottom:4px;}
+  .edu-card .school{color:var(--teal); font-family:var(--font-mono); font-size:0.83rem; margin-bottom:4px;}
+  .edu-card .when{color:var(--slate); font-size:0.83rem;}
+  .creds-list{margin-top:32px; display:flex; flex-wrap:wrap; gap:12px;}
+  .cred-pill{display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:0.8rem; color:var(--ink-dim); border:1px solid var(--line); border-radius:20px; padding:6px 14px 6px 6px;}
+  .cred-pill .logo-slot{width:26px; height:26px; border-radius:50%; font-size:0.44rem; border-style:dashed;}
+
+  /* PROJECTS */
+  .project-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:26px; margin-bottom:20px;}
+  .project-card h3{font-size:1.1rem; margin-bottom:14px;}
+  .flow{display:flex; flex-wrap:wrap; gap:0; font-size:0.92rem; color:var(--ink-dim);}
+  .flow-step{padding:4px 0;}
+  .flow-step b{color:var(--ink); font-weight:500;}
+  .flow-arrow{color:var(--teal); margin:0 10px; font-family:var(--font-mono);}
+
+  /* INTERESTS */
+  .interest-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px;}
+  .interest-card{padding:20px 0; border-top:1px solid var(--line);}
+  .interest-card .icon{font-family:var(--font-mono); color:var(--teal); font-size:0.78rem; margin-bottom:10px;}
+  .interest-card h3{font-size:1.02rem; margin-bottom:6px; font-family:var(--font-body); font-weight:600;}
+  .interest-card p{color:var(--ink-dim); font-size:0.9rem; margin:0;}
+
+  /* RESUME CTA */
+  .resume-cta{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:44px; text-align:center;}
+  .resume-cta h2{margin-bottom:10px;}
+  .resume-cta p{color:var(--slate); margin-bottom:26px;}
+
+  /* CONTACT / FOOTER */
+  footer{border-top:1px solid var(--line); padding:64px 0 40px;}
+  .contact-grid{display:flex; flex-wrap:wrap; gap:40px; margin-bottom:48px;}
+  .contact-item .label{font-family:var(--font-mono); font-size:0.74rem; color:var(--slate); margin-bottom:6px;}
+  .contact-item a{font-size:1rem; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--line); padding-bottom:2px;}
+  .contact-item a:hover{color:var(--teal); border-color:var(--teal);}
+  .foot-fine{color:var(--slate-dim); font-size:0.82rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="brand">LAEEQ<span>.</span>ZAFAR</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Notable Work</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="status-tag">STATUS: <b>ACTIVE</b> · TRENTON, ON</div>
+          <h1>Laeeq Zafar</h1>
+          <div class="role">Electrical Reliability Engineer</div>
+          <div class="tags">Electrical Engineering · Industrial Automation · Reliability · Industrial Systems</div>
+          <p class="lede">Ten years of hands-on electrical engineering across offshore drilling rigs and heavy steel manufacturing — from troubleshooting 3,000&nbsp;HP drive systems to leading root-cause investigations that cut recurring failures. PMP-certified, MEng in Electrical &amp; Computer Engineering from Waterloo.</p>
+          <div class="btn-row">
+            <a href="#career" class="btn btn-primary">View My Experience</a>
+            <a href="Laeeq_Zafar_Resume.pdf" class="btn btn-outline" download>Download Resume</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="portrait-slot">
+          <!-- Replace with: <img src="assets/portrait.jpg" alt="Portrait of Laeeq Zafar"> -->
+          <div class="logo-slot">PORTRAIT<br>PHOTO<br>4:5<br>assets/portrait.jpg</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-kicker">About</div>
+      <h2>Who I am</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I'm an electrical engineer who has spent most of his career at the equipment, not behind a desk — commissioning drive systems on jack-up rigs in the Arabian Gulf, running maintenance for unionized trades in a steel mill, and now leading reliability engineering across a multi-vendor automation environment in Ontario.</p>
+          <p>My path has moved from execution toward reliability strategy: root-cause analysis on repeat failures, criticality-based maintenance planning, and the automation and instrumentation systems that keep heavy industrial equipment running. I hold a PMP and an MEng from the University of Waterloo, and I'm currently working through the technical competency documentation for a P.Eng. license with APEGA.</p>
+          <p>Outside engineering, I serve as an officer in the Canadian Army Reserve and sit on the board of a non-profit that teaches technology skills to youth and seniors — both places where discipline and teaching intersect with the same instincts I bring to industrial reliability work.</p>
+        </div>
+        <div class="stat-panel">
+          <div class="stat"><b>~10 yrs</b><span>Heavy industrial experience</span></div>
+          <div class="stat"><b>3,000 HP</b><span>Largest drive systems supported</span></div>
+          <div class="stat"><b>2</b><span>Continents of offshore &amp; industrial work</span></div>
+          <div class="stat"><b>PMP</b><span>+ MEng, Waterloo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section id="career" style="background:var(--bg-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-kicker">Career</div>
+      <h2>Career progression</h2>
+      <p class="section-intro">From offshore drilling electrics, through steel-mill maintenance leadership, to reliability engineering in pulp &amp; paper automation.</p>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="tl-head">
+            <!-- Replace with: <div class="logo-slot"><img src="assets/logos/kruger.svg" alt="Kruger Products logo"></div> -->
+            <div class="logo-slot">KRUGER<br>LOGO</div>
+            <div>
+              <div class="dates">[Start date TBD] — Present</div>
+              <h3>Electrical Reliability Engineer</h3>
+            </div>
+          </div>
+          <div class="org">Kruger Products · Trenton, Ontario, Canada</div>
+          <p class="desc">Reliability engineering across a multi-vendor mill automation environment — PLCs, VFDs, and robotics — with responsibility for failure analysis, root-cause investigations, and technical recommendations to improve equipment uptime.</p>
+          <ul>
+            <li>Own failure analysis (FA) and root-cause analysis (RCA) for reliability issues across mill automation systems</li>
+            <li>Work across multi-vendor PLC, VFD, and robotics platforms</li>
+            <li>Develop technical recommendations to improve equipment reliability</li>
+          </ul>
+          <span class="note-flag">Awaiting: exact start date, full role scope, and any metrics from your Kruger job description</span>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="tl-head">
+            <!-- Replace with: <div class="logo-slot"><img src="assets/logos/tenaris.svg" alt="Tenaris logo"></div> -->
+            <div class="logo-slot">TENARIS<br>LOGO</div>
+            <div>
+              <div class="dates">March 2023 — [End date TBD]</div>
+              <h3>Electrical and Automation Supervisor</h3>
+            </div>
+          </div>
+          <div class="org">Tenaris Canada · Sault Ste. Marie, Ontario, Canada</div>
+          <p class="desc">Supervised unionized electricians and mechanics across routine and emergency maintenance in a steel pipe manufacturing plant, with direct responsibility for HSE compliance, CMMS planning, and cross-functional reliability improvement.</p>
+          <ul>
+            <li>Supervised unionized electricians, mechanics, and contractors on predictive/preventive and emergency maintenance, with 100% HSE compliance</li>
+            <li>Planned shutdown and routine maintenance in SAP CMMS — resourcing, KPI alignment, critical spares, and budget forecasting</li>
+            <li>Provided technical support on drive controllers and dynamic braking systems up to 3,000 HP, PLCs (Allen-Bradley, Modicon), HMIs, and plant networking (Ethernet/IP, Profibus, fiber)</li>
+            <li>Led failure analysis and root-cause analysis on critical and repeat failures — reduced breakdowns roughly 80% through RCA-driven PM program improvements</li>
+            <li>Ran training programs for shop-floor staff on JSPs, SOPs, CSA standards, and electrical fundamentals</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">VFD / SCR drives</span><span class="tag">Allen-Bradley PLCs</span><span class="tag">SAP CMMS</span><span class="tag">RCA / FA</span><span class="tag">SIS / SIF / SIL</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="tl-head">
+            <!-- Replace with: <div class="logo-slot"><img src="assets/logos/adnoc.svg" alt="ADNOC Drilling logo"></div> -->
+            <div class="logo-slot">ADNOC<br>LOGO</div>
+            <div>
+              <div class="dates">June 2015 — December 2021</div>
+              <h3>Site Electrical Engineer / Supervisor (Offshore)</h3>
+            </div>
+          </div>
+          <div class="org">ADNOC Drilling · Abu Dhabi, UAE</div>
+          <p class="desc">Led electrical maintenance and major overhaul projects on offshore jack-up drilling rigs, working in ATEX Zone 0 hazardous areas across equipment from multiple manufacturers.</p>
+          <ul>
+            <li>Led all electrical maintenance activities with 100% SOP/HSE compliance, including work in Ex-rated (ATEX Zone 0) areas</li>
+            <li>Ran equipment criticality analysis to prioritize assets by operational risk, optimizing spares and preventive maintenance planning</li>
+            <li>Directed electrical scope on rig major maintenance and overhaul projects — engineering assessments, Management of Change (MOC) compliance, and vendor technical/cost evaluations for CAPEX initiatives</li>
+            <li>Managed contractors and trained technicians across commissioning and hand-over of rig electrical systems</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">High-voltage distribution</span><span class="tag">Generator systems</span><span class="tag">Electrical protection</span><span class="tag">VFDs</span><span class="tag">CAPEX / MOC</span><span class="tag">SAP CMMS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-kicker">Skills</div>
+      <h2>Technical skills</h2>
+      <p class="section-intro">Organized the way the equipment is — by system, not by buzzword.</p>
+      <div class="skill-grid">
+        <div class="skill-module">
+          <h3>ELECTRICAL ENGINEERING</h3>
+          <ul>
+            <li>High-voltage electrical distribution</li>
+            <li>Electrical protection systems</li>
+            <li>Generator systems</li>
+            <li>Instrumentation (temp, pressure, flow, level, speed)</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>AUTOMATION &amp; CONTROLS</h3>
+          <ul>
+            <li>PLCs — Allen-Bradley, Modicon</li>
+            <li>Studio 5000, Unity Pro</li>
+            <li>HMI / SCADA</li>
+            <li>Ethernet/IP, Profibus, fiber optic networks</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>DRIVES &amp; MOTORS</h3>
+          <ul>
+            <li>VFD / SCR drives, motors to 3,000 HP</li>
+            <li>Dynamic braking systems</li>
+            <li>ABB G380 / ACS880 fundamentals</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>INDUSTRIAL SYSTEMS</h3>
+          <ul>
+            <li>SIS / SIF / SIL safety systems</li>
+            <li>Hydraulic and pneumatic control</li>
+            <li>ATEX Zone 0 hazardous-area work</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>RELIABILITY &amp; MAINTENANCE</h3>
+          <ul>
+            <li>Root-cause &amp; failure analysis (RCA/FA)</li>
+            <li>Equipment criticality analysis</li>
+            <li>SAP CMMS planning</li>
+            <li>Preventive &amp; predictive maintenance</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>DATA &amp; PROGRAMMING</h3>
+          <ul>
+            <li>Power BI (PL-300)</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-module">
+          <h3>PROJECT MANAGEMENT</h3>
+          <ul>
+            <li>PMP-certified</li>
+            <li>MS Project</li>
+            <li>CAPEX planning, MOC processes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" style="background:var(--bg-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-kicker">Education &amp; Credentials</div>
+      <h2>Education &amp; credentials</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <!-- Replace with: <div class="logo-slot"><img src="assets/logos/waterloo.svg" alt="University of Waterloo logo"></div> -->
+          <div class="logo-slot">UW<br>LOGO</div>
+          <div>
+            <div class="deg">MEng, Electrical &amp; Computer Engineering</div>
+            <div class="school">University of Waterloo</div>
+            <div class="when">January 2022 — December 2022</div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <!-- Replace with: <div class="logo-slot"><img src="assets/logos/khalifa.svg" alt="Khalifa University logo"></div> -->
+          <div class="logo-slot">KU<br>LOGO</div>
+          <div>
+            <div class="deg">BSc, Electrical Engineering</div>
+            <div class="school">Khalifa University, Abu Dhabi</div>
+            <div class="when">May 2011 — December 2015</div>
+          </div>
+        </div>
+      </div>
+      <div class="creds-list">
+        <span class="cred-pill">
+          <span class="logo-slot">PMI</span> Project Management Professional (PMP)
+        </span>
+        <span class="cred-pill">
+          <span class="logo-slot">CE</span> CompEx — Explosion Proof Fundamentals
+        </span>
+        <span class="cred-pill">
+          <span class="logo-slot">MS</span> Microsoft PL-300 — Data Analyst
+        </span>
+        <span class="cred-pill">
+          <span class="logo-slot">ABB</span> ABB G380 / ACS880 Fundamentals
+        </span>
+        <span class="cred-pill">
+          <span class="logo-slot">AP</span> Pursuing P.Eng. (APEGA)
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTABLE WORK -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-kicker">Notable Work</div>
+      <h2>Selected engineering work</h2>
+      <p class="section-intro">A few examples where the problem, the approach, and the result are all documented.</p>
+
+      <div class="project-card">
+        <h3>Recurring-failure reduction program — Tenaris Canada</h3>
+        <div class="flow">
+          <span class="flow-step"><b>Problem:</b> Repeated equipment breakdowns were driving unplanned downtime on plant floor equipment.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Approach:</b> Structured root-cause analysis on critical and repeat failures, feeding directly into the preventive maintenance program.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Technology:</b> SAP CMMS, RCA methodology, cross-functional reliability collaboration.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Result:</b> ~80% reduction in breakdowns tied to the targeted failure modes.</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Rig electrical major overhauls — ADNOC Drilling</h3>
+        <div class="flow">
+          <span class="flow-step"><b>Problem:</b> Multiple jack-up rigs needed electrical major-maintenance and overhaul work across equipment from different manufacturers.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Approach:</b> Led engineering and risk assessments under Management of Change (MOC) procedures, coordinating vendor technical and cost evaluations.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Technology:</b> CAPEX evaluation, schematics/documentation, commissioning.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Result:</b> Overhaul projects executed to completion and formal hand-over across multiple rigs.</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Mill reliability engineering — Kruger Products</h3>
+        <div class="flow">
+          <span class="flow-step"><b>Problem:</b> Reliability issues across a multi-vendor automation environment (PLCs, VFDs, robotics).</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Approach:</b> Failure analysis and root-cause investigation feeding technical recommendations.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Technology:</b> Multi-vendor PLC/VFD/robotics platforms.</span><span class="flow-arrow">→</span>
+          <span class="flow-step"><b>Result:</b> <em style="color:var(--slate); font-style:normal;">[metrics/outcomes to be added once available]</em></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests" style="background:var(--bg-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-kicker">Interests</div>
+      <h2>Outside the plant</h2>
+      <div class="interest-grid">
+        <div class="interest-card">
+          <div class="icon">[ MIL ]</div>
+          <h3>Canadian Army Reserve</h3>
+          <p>2Lt, Electrical Mechanical Engineering Officer, 33 Service Battalion, 33 Canadian Brigade Group.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">[ FIT ]</div>
+          <h3>Fitness</h3>
+          <p>Weightlifting, MMA, swimming, and hiking.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">[ AVI ]</div>
+          <h3>Aviation</h3>
+          <p>Ongoing interest in recreational aviation.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">[ STEM ]</div>
+          <h3>STEM outreach</h3>
+          <p>Director at Open Code Canada, a non-profit providing tech skills training for youth and seniors.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">[ TRV ]</div>
+          <h3>Travel</h3>
+          <p>Time across the Gulf, North America, and beyond, shaped by an offshore and expat career.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">[ TECH ]</div>
+          <h3>Emerging technology</h3>
+          <p>Following industrial data/analytics and AI tooling as it applies to reliability engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME CTA -->
+  <section>
+    <div class="wrap">
+      <div class="resume-cta">
+        <h2>Want the full picture?</h2>
+        <p>Download the complete résumé for detailed history, dates, and scope.</p>
+        <a href="Laeeq_Zafar_Resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="section-kicker">Contact</div>
+    <h2 style="margin-bottom:32px;">Get in touch</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">EMAIL</div>
+        <a href="mailto:laeeq.zafar@gmail.com">laeeq.zafar@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">PHONE</div>
+        <a href="tel:+14164749837">+1 (416) 474-9837</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">LINKEDIN</div>
+        <a href="https://linkedin.com/in/laeeq-zafar" target="_blank" rel="noopener">linkedin.com/in/laeeq-zafar</a>
+      </div>
+    </div>
+    <p class="foot-fine">© <span id="year"></span> Laeeq Zafar. Sault Ste. Marie / Trenton, Ontario.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
